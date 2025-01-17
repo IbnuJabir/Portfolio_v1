@@ -112,7 +112,7 @@ const projects = [
       "An AI-powered app that generates recipes from leftover ingredients. Integrated multiple APIs, deployed with Docker & NGINX.",
     techStack: ["Flask", "React", "TypeScript", "MongoDB", "Docker"],
     content: (
-      <PinContainer title="RemyRecipeX" href="https://remyrecipex.vercel.app">
+      <PinContainer title="RemyRecipeX" href="https://remyrecipes.up.railway.app">
         <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[40rem] ">
           <div className="flex items-center justify-center w-full h-full">
             <Image
@@ -157,13 +157,13 @@ const projects = [
     Github: "https://github.com/IbnuJabir/simple_shell",
   },
   {
-    title: "Chatosphere",
+    title: "ChatoSphere",
     description:
       "A full-fledged desktop chat application built using React for the frontend and Firebase for the backend. Features include user authentication, real-time messaging, user presence indication, persistent chat history, profile management, and real-time notifications.",
     techStack: ["React", "Firebase", "CSS", "Material-UI"],
     content: (
       <PinContainer
-        title="Fullstack Desktop Chat Application"
+        title="ChatoSphere"
         href="https://github.com/IbnuJabir/fullStack_chatApp"
       >
         <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[40rem]">

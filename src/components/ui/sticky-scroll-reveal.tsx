@@ -76,21 +76,21 @@ export const StickyScroll = ({
       ref={ref}
     >
       {/* Left Section: Project Titles & Descriptions */}
-      <div className="relative flex items-start px-4">
+      <div className="relative flex items-start px-4 gap-8">
         <div className="max-w-2xl">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
               <motion.h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                className="text-2xl font-bold text-[#3bd6b2]"
+                className="text-2xl md:text-3xl font-bold text-[#3bd6b2]"
               >
                 {item.title}
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                className="text-sm  max-w-sm mt-4"
+                className="text-sm md:text-xl  max-w-sm mt-4"
               >
                 {item.description}
               </motion.p>
