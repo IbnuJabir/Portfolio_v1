@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import React from "react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
 
 export interface OrbitingCirclesProps
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -12,6 +13,7 @@ export interface OrbitingCirclesProps
   path?: boolean;
   iconSize?: number;
   speed?: number;
+  slugs: string[];
 }
 
 export function OrbitingCircles({
@@ -23,6 +25,7 @@ export function OrbitingCircles({
   path = true,
   iconSize = 30,
   speed = 1,
+  slugs,
   ...props
 }: OrbitingCirclesProps) {
   const calculatedDuration = duration / speed;
@@ -44,28 +47,29 @@ export function OrbitingCircles({
         </svg>
       )}
       {React.Children.map(children, (child, index) => {
-        const angle = (360 / React.Children.count(children)) * index;
-        return (
-          <div
-            style={
-              {
-                "--duration": calculatedDuration,
-                "--radius": radius,
-                "--angle": angle,
-                "--icon-size": `${iconSize}px`,
-              } as React.CSSProperties
-            }
-            className={cn(
-              `absolute flex size-[var(--icon-size)] transform-gpu animate-orbit items-center justify-center rounded-full`,
-              { "[animation-direction:reverse]": reverse },
-              className,
-            )}
-            {...props}
-          >
-            {child}
-          </div>
-        );
-      })}
+  const angle = (360 / React.Children.count(children)) * index;
+  return (
+    <div
+      style={
+        {
+          "--duration": calculatedDuration,
+          "--radius": radius,
+          "--angle": angle,
+          "--icon-size": `${iconSize}px`,
+        } as React.CSSProperties
+      }
+      className={cn(
+        `absolute flex size-[var(--icon-size)] transform-gpu animate-orbit items-center justify-center rounded-full hover:scale-2`,
+        { "[animation-direction:reverse]": reverse },
+        className,
+      )}
+      {...props}
+    >
+      {child}
+    </div>
+  );
+})}
+
     </>
   );
 }

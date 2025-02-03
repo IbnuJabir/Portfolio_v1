@@ -60,7 +60,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             </div>
 
             <div className="relative group block p-2 h-full w-full">
-              <AnimatePresence>
+              {/* <AnimatePresence>
                 {hoveredIndex === index && (
                   <motion.span
                     className="absolute inset-0 h-full w-full bg-neutral-300 dark:bg-slate-800/[0.8] block rounded-3xl"
@@ -70,7 +70,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     exit={{ opacity: 0, transition: { duration: 0.2 } }}
                   />
                 )}
-              </AnimatePresence>
+              </AnimatePresence> */}
 
               <motion.div
                 className="relative flex flex-col p-4 rounded-2xl bg-white dark:bg-transparent shadow-lg border border-transparent group-hover:border-blue-500 transition-all"
