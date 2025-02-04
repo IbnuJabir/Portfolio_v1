@@ -82,7 +82,7 @@ const projects = [
   {
     title: "DocStream",
     description:
-      "A hospital management system with a real-time statistics dashboard, appointment management, and automated email notifications.",
+      "A hospital management system with a real-time statistics dashboard, appointment management, payment integration and automated email notifications.",
     techStack: ["Node.js", "Express.js", "React", "MongoDB", "Redux"],
     content: (
       <PinContainer
@@ -157,7 +157,7 @@ const projects = [
     Github: "https://github.com/IbnuJabir/simple_shell",
   },
   {
-    title: "Fullstack Desktop Chat Application",
+    title: "Chatosphere",
     description:
       "A full-fledged desktop chat application built using React for the frontend and Firebase for the backend. Features include user authentication, real-time messaging, user presence indication, persistent chat history, profile management, and real-time notifications.",
     techStack: ["React", "Firebase", "CSS", "Material-UI"],
