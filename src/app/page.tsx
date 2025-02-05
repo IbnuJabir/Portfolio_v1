@@ -36,38 +36,38 @@ export default function Home() {
 
   const links = [
     {
-      title: "Home",
+      title: "About",
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#about",
     },
 
     {
-      title: "Products",
+      title: "Experience",
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#experience",
     },
     {
-      title: "Components",
+      title: "Skills",
       icon: (
         <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#skills",
     },
     {
-      title: "Aceternity UI",
+      title: "Testimonials",
       icon: <Image src={logo} width={20} height={20} alt="Aceternity Logo" />,
-      href: "#",
+      href: "#testimonials",
     },
     {
-      title: "Changelog",
+      title: "Contact",
       icon: (
         <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#contact",
     },
 
     {
@@ -89,8 +89,11 @@ export default function Home() {
     },
   ];
   return (
-    <div className="w-full overflow-x-hidden flex flex-col justify-between items-center justify-items-center gap-16 py-10">
-      <header className="z-10 w-full flex items-baseline justify-center md:justify-between align-bottom md:px-16">
+    <div
+      id="about"
+      className="w-full overflow-x-hidden flex flex-col justify-between items-center justify-items-center gap-16 py-10"
+    >
+      <header className="hidden z-10 w-full md:flex items-baseline justify-center md:justify-between align-bottom md:px-16">
         <Link href="/" className="cursor-pointer">
           <Image
             src={logo}
@@ -104,9 +107,30 @@ export default function Home() {
       {/* <Spotlight /> */}
       <main className="w-full flex flex-col justify-between gap-8 row-start-2 items-center sm:items-start z-10">
         <About />
-        <Experience />
-        <Projects />
-        <Skills />
+        <div
+          id="experience"
+          // className="w-full flex flex-col items-center justify-center gap-8"
+        >
+          <Experience />
+        </div>
+        <div
+          id="projects"
+          className="w-full flex flex-col items-center justify-center gap-8"
+        >
+          <Projects />
+        </div>
+        <div
+          id="skills"
+          className="w-full flex flex-col items-center justify-center gap-8"
+        >
+          <Skills />
+        </div>
+        <div
+          id="testimonials"
+          className="w-full flex flex-col items-center justify-center gap-8"
+        >
+          {/* <Testimonials /> */}
+        </div>
       </main>
       <footer className="fixed bottom-5 left-0 right-0 row-start-3 flex gap-6 flex-wrap items-center justify-center z-10 ">
         <FloatingDock
