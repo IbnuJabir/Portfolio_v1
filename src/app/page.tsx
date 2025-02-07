@@ -20,6 +20,7 @@ import About from "@/components/About";
 // import { Spotlight } from "@/components/ui/spotlight-new";
 import { Projects } from "@/components/Projects";
 import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const { setTheme } = useTheme();
@@ -120,6 +121,9 @@ export default function Home() {
           className="w-full flex flex-col items-center justify-center gap-8"
         >
           {/* <Testimonials /> */}
+        </div>
+        <div id="contact" className="w-full flex flex-col items-center justify-center gap-8">
+          <Contact />
         </div>
       </main>
       <footer className="fixed bottom-5 left-0 right-0 row-start-3 flex gap-6 flex-wrap items-center justify-center z-10 ">
