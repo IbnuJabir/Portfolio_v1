@@ -1,7 +1,6 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { AnimatePresence } from "framer-motion";
 
 interface TimelineEntry {
   time: string;
@@ -15,7 +14,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerHeight, setContainerHeight] = useState(0);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const updateHeight = () => {
