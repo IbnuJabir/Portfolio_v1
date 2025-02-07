@@ -29,6 +29,12 @@ const nextConfig: NextConfig = {
         port: "",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.simpleicons.org",
+        port: "",
+        search: "",
+      },
     ],
   },
 };
