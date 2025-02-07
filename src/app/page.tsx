@@ -1,13 +1,5 @@
 "use client";
-import {
-  Github,
-  Instagram,
-  Linkedin,
-  Moon,
-  MoonIcon,
-  Sun,
-  X,
-} from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
@@ -16,18 +8,16 @@ import logo from "@/assets/logo.png";
 import Image from "next/image";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
-  IconBrandGithub,
-  IconBrandX,
   IconExchange,
   IconHome,
   IconNewSection,
   IconTerminal2,
 } from "@tabler/icons-react";
-import MorphingText from "@/components/ui/morphing-text";
+// import MorphingText from "@/components/ui/morphing-text";
 import Link from "next/link";
 import Experience from "@/components/Experience";
 import About from "@/components/About";
-import { Spotlight } from "@/components/ui/spotlight-new";
+// import { Spotlight } from "@/components/ui/spotlight-new";
 import { Projects } from "@/components/Projects";
 import Skills from "@/components/Skills";
 

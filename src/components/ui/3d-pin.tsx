@@ -3,7 +3,6 @@ import type React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 export const PinContainer = ({
   children,
   title,
@@ -62,7 +61,6 @@ export const PinContainer = ({
 
 export const PinPerspective = ({
   title,
-  href,
 }: {
   title?: string;
   href?: string;
@@ -71,9 +69,7 @@ export const PinPerspective = ({
     <motion.div className="pointer-events-none  w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className=" w-full h-full -mt-7 flex-none  inset-0">
         <div className="absolute top-0 inset-x-0  flex justify-center">
-          <div
-            className="relative flex space-x-2 items-center z-[9000] rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 "
-          >
+          <div className="relative flex space-x-2 items-center z-[9000] rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 ">
             <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5">
               {title}
             </span>

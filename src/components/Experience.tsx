@@ -1,8 +1,5 @@
-import Image from "next/image";
 import React from "react";
 import { Timeline } from "./ui/timeline";
-import img1 from "@/assets/trello.png";
-import img2 from "@/assets/trello1.png";
 function Experience() {
   const data = [
     {

@@ -10,7 +10,6 @@ import voltstore from "@/assets/voltstore.png";
 import simpleShell from "@/assets/linux.jpg";
 import chatApp from "@/assets/chatApp.png";
 import { PinContainer } from "./ui/3d-pin";
-import { Github } from "lucide-react";
 
 const projects = [
   {
@@ -112,7 +111,10 @@ const projects = [
       "An AI-powered app that generates recipes from leftover ingredients. Integrated multiple APIs, deployed with Docker & NGINX.",
     techStack: ["Flask", "React", "TypeScript", "MongoDB", "Docker"],
     content: (
-      <PinContainer title="RemyRecipeX" href="https://remyrecipes.up.railway.app">
+      <PinContainer
+        title="RemyRecipeX"
+        href="https://remyrecipes.up.railway.app"
+      >
         <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[40rem] ">
           <div className="flex items-center justify-center w-full h-full">
             <Image

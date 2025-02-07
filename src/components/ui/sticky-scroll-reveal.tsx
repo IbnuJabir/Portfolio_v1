@@ -3,12 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import {
-  FolderOpenIcon,
-  Github,
-  Globe,
-  SquareArrowOutUpRight,
-} from "lucide-react";
+import { Github, Globe } from "lucide-react";
 
 export const StickyScroll = ({
   content,
@@ -25,7 +20,7 @@ export const StickyScroll = ({
   contentClassName?: string;
 }) => {
   const [activeCard, setActiveCard] = useState(0);
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     container: ref,
     offset: ["start start", "end start"],
