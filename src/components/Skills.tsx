@@ -1,7 +1,6 @@
 import React from "react";
 import { OrbitingCircles } from "./ui/orbiting-circles";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
-import Image from "next/image";
 
 const slugs = [
   "typescript", "javascript", "python", "c", "c++",
@@ -35,7 +34,7 @@ function Skills() {
               <TooltipProvider key={index + orbitIndex * 4}>
                 <Tooltip>
                   <TooltipTrigger>
-                    <Image
+                    <img
                       src={imgSrc}
                       alt={slugs[index + orbitIndex * 4]}
                       className="w-8 h-8 transition-transform duration-300 ease-in-out hover:rotate-45"
