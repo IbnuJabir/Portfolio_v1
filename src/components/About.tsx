@@ -1,8 +1,13 @@
 import React from "react";
 import Link from "next/link";
-import { Github, Instagram, Linkedin, Mail, Send, X } from "lucide-react";
+import { Github, Instagram, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import MorphingText from "@/components/ui/morphing-text";
+import { FaTelegram } from "react-icons/fa6";
+import { BsTwitterX } from "react-icons/bs";
+import { FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
+import logo from "@/assets/logo.png";
 
 const texts = [
   "Fullstack Developer",
@@ -14,57 +19,70 @@ function About() {
   return (
     <div className="w-full flex flex-col md:flex-row gap-8 justify-between items-start md:px-16 px-6">
       {/* Left Section */}
-      <div className="w-full md:w-1/3 flex flex-col gap-1 justify-start items-start px-2">
-        <h1 className="text-3xl md:text-4xl font-bold z-10 m-0 text-left text-gray-900 dark:text-white">
-          Kedir Jabir
-        </h1>
-        <MorphingText
-          texts={texts}
-          className="text-left text-gray-700 dark:text-gray-300"
-        />
+      <div className="w-full md:w-1/3 flex flex-col gap-1 justify-start items-center md:items-start md:justify-start px-2">
+        <div className="w-full flex items-center justify-center gap-8">
+          <Link href="/" className="cursor-pointe md:hidden">
+            <Image
+              src={logo}
+              alt="Logo"
+              width={100}
+              height={100}
+              className="text-blue-500 w-11 h-11"
+            />
+          </Link>
+          <div className="w-1/2 md:w-full">
+            <h1 className="font-changa text-3xl md:text-4xl font-bold z-10 text-left text-gray-900 dark:text-white">
+              Kedir Jabir
+            </h1>
+            <MorphingText
+              texts={texts}
+              className="text-gray-700 dark:text-gray-300 text-left"
+            />
+          </div>
+        </div>
 
-        <div className="w-full flex gap-4 md:gap-8 items-center justify-start mt-12">
+        <div className="w-full flex gap-4 md:gap-5 items-center justify-center md:justify-start md:items-center mt-12">
           <Link
             target="_blank"
             href="mailto:kedirjabir12@gmail.com"
-            className="cursor-pointer"
+            className="cursor-pointer group"
           >
-            <Mail className="text-gray-900 dark:text-gray-300 size-5 md:size-7" />
+            <Mail className="text-gray-900 dark:text-gray-300 size-5 md:size-5 transition-all duration-300 transform group-hover:text-red-500 group-hover:scale-125" />
           </Link>
           <Link
             target="_blank"
             href="https://github.com/IbnuJabir"
-            className="cursor-pointer"
+            className="cursor-pointer group"
           >
-            <Github className="text-gray-900 dark:text-gray-300 size-5 md:size-7" />
+            <Github className="text-gray-900 dark:text-gray-300 size-5 md:size-5 transition-all duration-300 transform group-hover:text-gray-800 dark:group-hover:text-gray-400 group-hover:scale-125" />
           </Link>
           <Link
             target="_blank"
             href="https://www.linkedin.com/in/ibnu-jabir/"
-            className="cursor-pointer"
+            className="cursor-pointer group"
           >
-            <Linkedin className="text-gray-900 dark:text-gray-300 size-5 md:size-7" />
+            <FaLinkedin className="text-gray-900 dark:text-gray-300 size-5 md:size-5 transition-all duration-300 transform group-hover:text-blue-600 group-hover:scale-125" />
           </Link>
           <Link
             target="_blank"
             href="https://x.com/Ibnu_J1"
-            className="cursor-pointer"
+            className="cursor-pointer group"
           >
-            <X className="text-gray-900 dark:text-gray-300 size-5 md:size-7" />
+            <BsTwitterX className="text-gray-900 dark:text-gray-300 size-5 md:size-5 transition-all duration-300 transform group-hover:text-black dark:group-hover:text-gray-200 group-hover:scale-125" />
           </Link>
           <Link
             target="_blank"
             href="https://t.me/Ibnu_Jabir1"
-            className="cursor-pointer"
+            className="cursor-pointer group"
           >
-            <Send className="text-gray-900 dark:text-gray-300 size-5 md:size-7" />
+            <FaTelegram className="text-gray-900 dark:text-gray-300 size-5 md:size-5 transition-all duration-300 transform group-hover:text-blue-500 group-hover:scale-125" />
           </Link>
           <Link
             target="_blank"
             href="https://www.instagram.com/ibnujabir42/"
-            className="cursor-pointer"
+            className="cursor-pointer group"
           >
-            <Instagram className="text-gray-900 dark:text-gray-300 size-5 md:size-7" />
+            <Instagram className="text-gray-900 dark:text-gray-300 size-5 md:size-5 transition-all duration-300 transform group-hover:text-pink-500 group-hover:scale-125" />
           </Link>
         </div>
 

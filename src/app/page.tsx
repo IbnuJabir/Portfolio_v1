@@ -1,5 +1,12 @@
 "use client";
-import { Moon, Sun } from "lucide-react";
+import {
+  ChevronsLeftRightEllipsis,
+  Codesandbox,
+  Moon,
+  SquareChartGantt,
+  Sun,
+  UserPen,
+} from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
@@ -7,20 +14,16 @@ import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
 import Image from "next/image";
 import { FloatingDock } from "@/components/ui/floating-dock";
-import {
-  IconExchange,
-  IconHome,
-  IconNewSection,
-  IconTerminal2,
-} from "@tabler/icons-react";
-// import MorphingText from "@/components/ui/morphing-text";
 import Link from "next/link";
 import Experience from "@/components/Experience";
 import About from "@/components/About";
-// import { Spotlight } from "@/components/ui/spotlight-new";
 import { Projects } from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
+import { IoIosPerson } from "react-icons/io";
+import { GoProject } from "react-icons/go";
+import { title } from "process";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const { setTheme } = useTheme();
@@ -29,7 +32,7 @@ export default function Home() {
     {
       title: "About",
       icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IoIosPerson className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#about",
     },
@@ -37,26 +40,34 @@ export default function Home() {
     {
       title: "Experience",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Codesandbox className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        // <SquareChartGantt className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#experience",
     },
     {
+      title: "Projects",
+      icon: (
+        <GoProject className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#projects",
+    },
+    {
       title: "Skills",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <ChevronsLeftRightEllipsis className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#skills",
     },
-    {
-      title: "Testimonials",
-      icon: <Image src={logo} width={20} height={20} alt="Aceternity Logo" />,
-      href: "#testimonials",
-    },
+    // {
+    //   title: "Testimonials",
+    //   icon: <Image src={logo} width={20} height={20} alt="Aceternity Logo" />,
+    //   href: "#testimonials",
+    // },
     {
       title: "Contact",
       icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <UserPen className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#contact",
     },
@@ -82,7 +93,7 @@ export default function Home() {
   return (
     <div
       id="about"
-      className="w-full overflow-x-hidden flex flex-col justify-between items-center justify-items-center gap-16 py-10"
+      className="w-full overflow-x-hidden flex flex-col justify-between items-center justify-items-center gap-16 pt-10"
     >
       <header className="hidden z-10 w-full md:flex items-baseline justify-center md:justify-between align-bottom md:px-16">
         <Link href="/" className="cursor-pointer">
@@ -122,11 +133,15 @@ export default function Home() {
         >
           {/* <Testimonials /> */}
         </div>
-        <div id="contact" className="w-full flex flex-col items-center justify-center gap-8">
+        <div
+          id="contact"
+          className="w-full flex flex-col items-center justify-center gap-8"
+        >
           <Contact />
         </div>
+        <Footer />
       </main>
-      <footer className="fixed bottom-5 left-0 right-0 row-start-3 flex gap-6 flex-wrap items-center justify-center z-10 ">
+      <footer className="fixed bottom-10 left-0 right-0 row-start-3 flex gap-6 flex-wrap items-center justify-center z-10 ">
         <FloatingDock
           mobileClassName="translate-y-20" // only for demo, remove for production
           items={links}
