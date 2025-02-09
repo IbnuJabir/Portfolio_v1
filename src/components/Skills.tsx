@@ -28,6 +28,9 @@ const slugs = [
   "jest",
   "docker",
   "git",
+  "trpc",
+  "reactquery",
+  "redux",
 ];
 
 function Skills() {
@@ -35,15 +38,11 @@ function Skills() {
     (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
   );
 
-  // State to track window width
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
   useEffect(() => {
-    // Ensure window is available before accessing
     if (typeof window !== "undefined") {
       setWindowWidth(window.innerWidth);
-
-      // Update width on resize
       const handleResize = () => setWindowWidth(window.innerWidth);
       window.addEventListener("resize", handleResize);
 
@@ -51,14 +50,16 @@ function Skills() {
     }
   }, []);
 
-  // If windowWidth is null (during SSR), use a default value
-  const width = windowWidth || 1024; // Assume 1024px as a default
-
-  const isMobile = width < 768; // same as md breakpoint in tailwind
+  const width = windowWidth || 1024; // Default to 1024px during SSR
+  const isMobile = width < 768;
 
   const orbitConfig = isMobile
     ? { radii: [40, 70, 100, 130, 160], iconSize: 20 }
     : { radii: [80, 120, 160, 200, 240], iconSize: 40 };
+
+  const iconCounts = [4, 4, 4, 5, 5]; // Icons per orbit
+
+  let currentIndex = 0;
 
   return (
     <div className="w-full h-full">
@@ -67,35 +68,42 @@ function Skills() {
           Skills
         </span>
 
-        {orbitConfig.radii.map((radius, orbitIndex) => (
-          <OrbitingCircles
-            key={radius}
-            iconSize={orbitConfig.iconSize}
-            radius={radius}
-            reverse={orbitIndex % 2 === 1}
-            speed={1}
-            slugs={slugs}
-          >
-            {images
-              .slice(orbitIndex * 4, (orbitIndex + 1) * 4)
-              .map((imgSrc, index) => (
-                <TooltipProvider key={index + orbitIndex * 4}>
+        {orbitConfig.radii.map((radius, orbitIndex) => {
+          const iconCount = iconCounts[orbitIndex]; // Get icon count for this orbit
+          const orbitIcons = images.slice(
+            currentIndex,
+            currentIndex + iconCount
+          );
+          currentIndex += iconCount; // Update index for next orbit
+
+          return (
+            <OrbitingCircles
+              key={radius}
+              iconSize={orbitConfig.iconSize}
+              radius={radius}
+              reverse={orbitIndex % 2 === 1}
+              speed={1}
+              slugs={slugs}
+            >
+              {orbitIcons.map((imgSrc, index) => (
+                <TooltipProvider key={index + currentIndex}>
                   <Tooltip>
                     <TooltipTrigger>
                       <img
                         src={imgSrc}
-                        alt={slugs[index + orbitIndex * 4]}
+                        alt={slugs[index + currentIndex - iconCount]}
                         className="w-8 h-8 transition-transform duration-300 ease-in-out hover:rotate-45"
                       />
                     </TooltipTrigger>
                     <TooltipContent>
-                      {slugs[index + orbitIndex * 4]}
+                      {slugs[index + currentIndex - iconCount]}
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
               ))}
-          </OrbitingCircles>
-        ))}
+            </OrbitingCircles>
+          );
+        })}
       </div>
     </div>
   );
