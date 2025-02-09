@@ -12,7 +12,7 @@ const Footer = () => {
           <Link
             href="https://github.com/IbnuJabir"
             target="_blank"
-            className="font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+            className="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors duration-300"
           >
             Kedir Jabir
           </Link>
@@ -22,7 +22,7 @@ const Footer = () => {
           <Link
             href="https://nextjs.org/"
             target="_blank"
-            className="font-semibold text-gray-900 dark:text-gray-100 hover:underline"
+            className="font-semibold text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-400 transition-colors duration-300"
           >
             Next.js
           </Link>{" "}
@@ -30,7 +30,7 @@ const Footer = () => {
           <Link
             href="https://tailwindcss.com/"
             target="_blank"
-            className="font-semibold text-blue-500 dark:text-blue-400 hover:underline"
+            className="font-semibold text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-200 transition-colors duration-300"
           >
             Tailwind CSS
           </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
           <Link
             href="https://vercel.com/"
             target="_blank"
-            className="font-semibold text-gray-800 dark:text-gray-200 hover:underline"
+            className="font-semibold text-gray-800 dark:text-gray-200 hover:text-gray-500 dark:hover:text-gray-400 transition-colors duration-300"
           >
             Vercel
           </Link>

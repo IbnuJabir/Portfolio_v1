@@ -1,12 +1,4 @@
-import {
-  Github,
-  Instagram,
-  Linkedin,
-  Mail,
-  Phone,
-  Send,
-  X,
-} from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { FaTelegram } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import Link from "next/link";

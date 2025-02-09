@@ -3,9 +3,7 @@ import {
   ChevronsLeftRightEllipsis,
   Codesandbox,
   Moon,
-  SquareChartGantt,
   Sun,
-  UserPen,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
@@ -22,9 +20,8 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import { IoIosPerson } from "react-icons/io";
 import { GoProject } from "react-icons/go";
-import { title } from "process";
 import Footer from "@/components/Footer";
-
+import { FaPhone } from "react-icons/fa";
 export default function Home() {
   const { setTheme } = useTheme();
 
@@ -67,7 +64,7 @@ export default function Home() {
     {
       title: "Contact",
       icon: (
-        <UserPen className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <FaPhone className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#contact",
     },
@@ -102,7 +99,7 @@ export default function Home() {
             alt="Logo"
             width={100}
             height={100}
-            className="text-blue-500 w-10 h-10"
+            className="text-blue-500 w-16 h-16"
           />
         </Link>
       </header>
@@ -111,7 +108,7 @@ export default function Home() {
         <About />
         <div
           id="experience"
-          // className="w-full flex flex-col items-center justify-center gap-8"
+          className="w-full flex flex-col items-center justify-center gap-8"
         >
           <Experience />
         </div>
