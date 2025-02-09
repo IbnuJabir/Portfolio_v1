@@ -90,9 +90,9 @@ export default function Home() {
   return (
     <div
       id="about"
-      className="w-full overflow-x-hidden flex flex-col justify-between items-center justify-items-center gap-16 pt-10"
+      className="w-full overflow-x-hidden flex flex-col justify-between items-center justify-items-center"
     >
-      <header className="hidden z-10 w-full md:flex items-baseline justify-center md:justify-between align-bottom md:px-16">
+      <header className="hidden z-10 w-full md:flex items-baseline justify-center md:justify-between align-bottom md:px-16 md:pl-28 md:py-10">
         <Link href="/" className="cursor-pointer">
           <Image
             src={logo}
