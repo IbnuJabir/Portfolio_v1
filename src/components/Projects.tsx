@@ -215,7 +215,7 @@ const projects = [
 export function Projects() {
   return (
     <div className="w-full py-10">
-      <h1 className="text-3xl py-10 px-16">Projects</h1>
+      <h1 className="text-3xl py-10 px-16 font-changa">Projects</h1>
       <StickyScroll content={projects} />
     </div>
   );
