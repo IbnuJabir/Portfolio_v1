@@ -1,5 +1,5 @@
-import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
-import { FaTelegram } from "react-icons/fa6";
+import { Instagram, Mail, Phone } from "lucide-react";
+import { FaLinkedin, FaTelegram } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 import Link from "next/link";
 export default function Contact() {
@@ -35,7 +35,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/ibnu-jabir/"
             className="cursor-pointer group"
           >
-            <Linkedin className="text-gray-900 dark:text-gray-300 size-5 md:size-5 transition-all duration-300 transform group-hover:text-blue-600 group-hover:scale-125" />
+            <FaLinkedin className="text-gray-900 dark:text-gray-300 size-5 md:size-5 transition-all duration-300 transform group-hover:text-blue-600 group-hover:scale-125" />
           </Link>
           <Link
             target="_blank"

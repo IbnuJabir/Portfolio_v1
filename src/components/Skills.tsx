@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { OrbitingCircles } from "./ui/orbiting-circles";
 import {
   Tooltip,
@@ -6,7 +7,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip";
-import { useWindowSize } from "react-haiku";
 
 const slugs = [
   "typescript",
@@ -34,13 +34,32 @@ function Skills() {
   const images = slugs.map(
     (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
   );
-  const { width } = useWindowSize(); // Get current window width
 
-  const isMobile = width < 768;
+  // State to track window width
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Ensure window is available before accessing
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+
+      // Update width on resize
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  // If windowWidth is null (during SSR), use a default value
+  const width = windowWidth || 1024; // Assume 1024px as a default
+
+  const isMobile = width < 768; // same as md breakpoint in tailwind
 
   const orbitConfig = isMobile
     ? { radii: [40, 70, 100, 130, 160], iconSize: 20 }
     : { radii: [80, 120, 160, 200, 240], iconSize: 40 };
+
   return (
     <div className="w-full h-full">
       <div className="relative flex h-[700px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">

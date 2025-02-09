@@ -138,7 +138,7 @@ export default function Home() {
         </div>
         <Footer />
       </main>
-      <footer className="fixed bottom-10 left-0 right-0 row-start-3 flex gap-6 flex-wrap items-center justify-center z-10 ">
+      <footer className="fixed bottom-3 left-1/3 right-1/3 row-start-3 flex gap-6 flex-wrap items-center justify-center z-10 ">
         <FloatingDock
           mobileClassName="translate-y-20" // only for demo, remove for production
           items={links}
