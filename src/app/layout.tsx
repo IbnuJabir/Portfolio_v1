@@ -13,9 +13,55 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// export const metadata: Metadata = {
+//   title: "Kedir Jabir",
+//   description: "Kedir Jabir's Portfolio Website",
+//   openGraph: {
+//     title: "Kedir Jabir",
+//     description: "Kedir Jabir's Portfolio Website",
+//     type: "website",
+//     locale: "en_US",
+//     url: "https://ibnujabir.tech/",
+//     siteName: "Kedir Jabir",
+//     images: [
+//       {
+//         url: "https://drive.google.com/file/d/1VvbHS6nSTonxsDd4WW7P8-_yba3_Igj3/view?usp=sharing",
+//         alt: "Kedir Jabir",
+//         width: 1200,
+//         height: 630,
+//       },
+//     ],
+//   },
+// };
 export const metadata: Metadata = {
-  title: "Kedir Jabir",
-  description: "Kedir Jabir's Portfolio Website",
+  title: "Kedir Jabir - Full Stack Developer",
+  description:
+    "Explore Kedir Jabir's portfolio, showcasing expertise in full-stack development, modern web technologies, and scalable software solutions.",
+  openGraph: {
+    title: "Kedir Jabir - Full Stack Developer",
+    description:
+      "Discover Kedir Jabir's journey as a full-stack developer, featuring innovative projects, technical expertise, and industry experience.",
+    type: "website",
+    locale: "en_US",
+    url: "https://ibnujabir.tech/",
+    siteName: "Kedir Jabir Portfolio",
+    images: [
+      {
+        url: "https://ibnujabir.tech/og-image.jpg", // Replace with a direct URL to an optimized image hosted on your site
+        alt: "Kedir Jabir - Full Stack Developer",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kedir Jabir - Full Stack Developer",
+    description:
+      "Showcasing full-stack expertise in modern web technologies, scalable architectures, and impactful projects.",
+    images: ["https://ibnujabir.tech/og-image.jpg"], // Ensure this matches the Open Graph image
+    site: "@YourTwitterHandle", // Replace with your Twitter handle if applicable
+  },
 };
 
 export default function RootLayout({
@@ -25,6 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
