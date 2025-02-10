@@ -5,8 +5,8 @@ Welcome to my personal portfolio website repository! This project showcases my w
 ## Screenshots
 
 ![Demo1 ](src/assets/home.png)
-![Demo2 ](src/assets/home-phone.png)
-![Demo3 ](src/assets/home-light.png)
+![Demo2 ](src/assets/home-light.png)
+![Demo3 ](src/assets/home-phone.png)
 ![Demo4 ](src/assets/home-light-phone.png)
 
 ## Table of Contents
