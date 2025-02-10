@@ -101,7 +101,7 @@ export default function Home() {
   return (
     <div
       id="about"
-      className="w-full overflow-x-hidden flex flex-col justify-between items-center justify-items-center"
+      className="w-full overflow-x-hidden flex flex-col justify-between items-center justify-items-center pt-10 md:pt-0"
     >
       <Preloader load={load} />
       <header className="hidden z-10 w-full md:flex items-baseline justify-center md:justify-between align-bottom md:px-16 md:pl-28 md:py-10">
