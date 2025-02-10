@@ -13,34 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// export const metadata: Metadata = {
-//   title: "Kedir Jabir",
-//   description: "Kedir Jabir's Portfolio Website",
-//   openGraph: {
-//     title: "Kedir Jabir",
-//     description: "Kedir Jabir's Portfolio Website",
-//     type: "website",
-//     locale: "en_US",
-//     url: "https://ibnujabir.tech/",
-//     siteName: "Kedir Jabir",
-//     images: [
-//       {
-//         url: "https://drive.google.com/file/d/1VvbHS6nSTonxsDd4WW7P8-_yba3_Igj3/view?usp=sharing",
-//         alt: "Kedir Jabir",
-//         width: 1200,
-//         height: 630,
-//       },
-//     ],
-//   },
-// };
 export const metadata: Metadata = {
   title: "Kedir Jabir - Full Stack Developer",
-  description:
-    "Explore Kedir Jabir's portfolio, showcasing expertise in full-stack development, modern web technologies, and scalable software solutions.",
+  description: "Building scalable and modern web applications.",
   openGraph: {
     title: "Kedir Jabir - Full Stack Developer",
-    description:
-      "Discover Kedir Jabir's journey as a full-stack developer, featuring innovative projects, technical expertise, and industry experience.",
+    description: "Showcasing expertise in full-stack development and web technologies.",
     type: "website",
     locale: "en_US",
     url: "https://ibnujabir.tech/",
@@ -49,20 +27,20 @@ export const metadata: Metadata = {
       {
         url: "/logo.png",
         alt: "Kedir Jabir - Full Stack Developer",
-        width: 600,
-        height: 430,
+        width: 1200,
+        height: 630,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kedir Jabir - Full Stack Developer",
-    description:
-      "Showcasing full-stack expertise in modern web technologies, scalable architectures, and impactful projects.",
+    description: "Building scalable and modern web applications.",
     images: ["/logo.png"],
     site: "@Ibnu_J1",
   },
 };
+
 
 export default function RootLayout({
   children,
