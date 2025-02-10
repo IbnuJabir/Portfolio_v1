@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Kedir Jabir Portfolio",
     images: [
       {
-        url: "https://ibnujabir.tech/og-image.jpg", // Replace with a direct URL to an optimized image hosted on your site
+        url: "/logo.png",
         alt: "Kedir Jabir - Full Stack Developer",
         width: 1200,
         height: 630,
@@ -59,8 +59,8 @@ export const metadata: Metadata = {
     title: "Kedir Jabir - Full Stack Developer",
     description:
       "Showcasing full-stack expertise in modern web technologies, scalable architectures, and impactful projects.",
-    images: ["https://ibnujabir.tech/og-image.jpg"], // Ensure this matches the Open Graph image
-    site: "@YourTwitterHandle", // Replace with your Twitter handle if applicable
+    images: ["/logo.png"],
+    site: "@Ibnu_J1",
   },
 };
 
