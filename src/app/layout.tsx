@@ -14,9 +14,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kedir Jabir",
-  description: "Kedir Jabir's Portfolio Website",
+  title: "Kedir Jabir - Full Stack Developer",
+  description: "Building scalable and modern web applications.",
+  openGraph: {
+    title: "Kedir Jabir - Full Stack Developer",
+    description: "Showcasing expertise in full-stack development and web technologies.",
+    type: "website",
+    locale: "en_US",
+    url: "https://ibnujabir.tech/",
+    siteName: "Kedir Jabir Portfolio",
+    images: [
+      {
+        url: "/logo.png",
+        alt: "Kedir Jabir - Full Stack Developer",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kedir Jabir - Full Stack Developer",
+    description: "Building scalable and modern web applications.",
+    images: ["/logo.png"],
+    site: "@Ibnu_J1",
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -25,6 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head></head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
