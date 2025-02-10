@@ -49,8 +49,8 @@ export const metadata: Metadata = {
       {
         url: "/logo.png",
         alt: "Kedir Jabir - Full Stack Developer",
-        width: 1200,
-        height: 630,
+        width: 600,
+        height: 430,
       },
     ],
   },
