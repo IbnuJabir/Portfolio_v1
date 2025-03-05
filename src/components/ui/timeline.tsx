@@ -96,7 +96,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   {item.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs font-medium text-[#64ffda] bg-[#112240] rounded-full"
+                      className="px-3 py-1 text-xs font-medium dark:text-[#64ffda] dark:bg-[#112240] bg-accent rounded-full"
                     >
                       {skill}
                     </span>

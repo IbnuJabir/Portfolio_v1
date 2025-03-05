@@ -108,11 +108,11 @@ function About() {
 
         <p className="mt-4 text-lg">
           Currently, I contribute as a{" "}
-          <strong className="text-blue-600 dark:text-blue-400">
+          <strong>
             Full Stack Developer
           </strong>{" "}
           at{" "}
-          <strong className="text-cyan-600 dark:text-cyan-400">
+          <strong className="text-blue-600 dark:text-blue-400">
             Alif Technologies
           </strong>
           , engineering robust solutions that enhance user engagement and
