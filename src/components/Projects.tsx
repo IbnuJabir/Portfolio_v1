@@ -25,7 +25,7 @@ const projects = [
       "Redux",
     ],
     content: (
-      <PinContainer title="Zad Al-Mead" href="https://zadalmead.com">
+      <PinContainer title="Zad Al-Mead" href="https://zadulmead.org">
         <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[40rem] ">
           <div className="flex items-center justify-center w-full h-full">
             <Image
@@ -40,7 +40,7 @@ const projects = [
         </div>
       </PinContainer>
     ),
-    website: "https://zadalmead.com",
+    website: "https://zadulmead.org",
   },
   {
     title: "Rails Trello",
