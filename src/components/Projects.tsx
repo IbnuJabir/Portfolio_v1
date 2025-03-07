@@ -23,6 +23,7 @@ const projects = [
       "Express.js",
       "TypeScript",
       "Redux",
+      "Tailwind CSS",
     ],
     content: (
       <PinContainer title="Zad Al-Mead" href="https://zadulmead.org">
@@ -55,6 +56,8 @@ const projects = [
       "Auth.js",
       "Turborepo",
       "Docker",
+      "Shadcn UI",
+      "Tailwind CSS",
     ],
     content: (
       <PinContainer
@@ -109,7 +112,7 @@ const projects = [
     title: "RemyRecipeX",
     description:
       "An AI-powered app that generates recipes from leftover ingredients. Integrated multiple APIs, deployed with Docker & NGINX.",
-    techStack: ["Flask", "React", "TypeScript", "MongoDB", "Docker"],
+    techStack: ["Flask", "React", "TypeScript", "MongoDB", "Docker","Shadcn UI", "Tailwind CSS"],
     content: (
       <PinContainer
         title="RemyRecipeX"
@@ -162,7 +165,7 @@ const projects = [
     title: "ChatoSphere",
     description:
       "A full-fledged desktop chat application built using React for the frontend and Firebase for the backend. Features include user authentication, real-time messaging, user presence indication, persistent chat history, profile management, and real-time notifications.",
-    techStack: ["React", "Firebase", "CSS", "Material-UI"],
+    techStack: ["React", "Zustand", "Firebase", "CSS", "Material-UI"],
     content: (
       <PinContainer
         title="ChatoSphere"
@@ -188,7 +191,7 @@ const projects = [
     title: "Voltstore",
     description:
       "An online e-commerce platform offering a user-friendly interface, detailed product catalog, advanced search functionality, shopping cart, secure checkout process, and user accounts for order tracking.",
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Redux"],
+    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Redux", "Tailwind CSS"],
     content: (
       <PinContainer
         title="Voltstore"
