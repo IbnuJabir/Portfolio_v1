@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-
+import { Analytics } from "@vercel/analytics/react";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,7 +18,8 @@ export const metadata: Metadata = {
   description: "Building scalable and modern web applications.",
   openGraph: {
     title: "Kedir Jabir - Full Stack Developer",
-    description: "Showcasing expertise in full-stack development and web technologies.",
+    description:
+      "Showcasing expertise in full-stack development and web technologies.",
     type: "website",
     locale: "en_US",
     url: "https://ibnujabir.tech/",
@@ -41,7 +42,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,6 +61,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
