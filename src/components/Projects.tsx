@@ -9,39 +9,40 @@ import remyrecipe from "@/assets/remyX.png";
 import voltstore from "@/assets/voltstore.png";
 import simpleShell from "@/assets/linux.jpg";
 import chatApp from "@/assets/chatApp.png";
+import tidymail from "@/assets/tidymail.png";
 import { PinContainer } from "./ui/3d-pin";
 
 const projects = [
   {
-    title: "Zad Al-Mead",
+    title: "TidyMail",
     description:
-      "A full-stack educational platform with custom student registration system and payment verification API. Implemented SEO optimization and built a responsive UI with efficient state management.",
+      "A blazing-fast inbox decluttering platform with Gmail API integration. Users can auto-detect all subscriptions, unsubscribe instantly, and bulk delete 10,000+ emails in under 3 minutes — with real-time sync, Google OAuth2 login, and strong privacy control.",
     techStack: [
-      "MongoDB",
-      "Node.js",
       "Next.js",
-      "Express.js",
-      "TypeScript",
-      "Redux",
       "Tailwind CSS",
+      "FastAPI",
+      "PostgreSQL",
+      "Gmail API",
+      "JWT",
+      "OAuth2",
     ],
     content: (
-      <PinContainer title="Zad Al-Mead" href="https://zadulmead.org">
-        <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[40rem] ">
+      <PinContainer title="TidyMail" href="https://tidymail.ibnujabir.tech">
+        <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[40rem]">
           <div className="flex items-center justify-center w-full h-full">
             <Image
-              src={zad || "/placeholder.svg"}
+              src={tidymail}
               width={300}
               height={300}
               className="w-full h-full"
-              alt="Zad Al-Mead"
+              alt="TidyMail"
             />
           </div>
-          <div className="flex flex-1 w-full rounded-lg mt-0 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+          <div className="flex flex-1 w-full rounded-lg mt-0 bg-gradient-to-br from-indigo-500 via-pink-500 to-purple-500" />
         </div>
       </PinContainer>
     ),
-    website: "https://zadulmead.org",
+    website: "https://tidymail.ibnujabir.tech",
   },
   {
     title: "Rails Trello",
@@ -82,6 +83,37 @@ const projects = [
     Github: "https://github.com/IbnuJabir/rails-trello",
   },
   {
+    title: "Zad Al-Mead",
+    description:
+      "A full-stack educational platform with custom student registration system and payment verification API. Implemented SEO optimization and built a responsive UI with efficient state management.",
+    techStack: [
+      "MongoDB",
+      "Node.js",
+      "Next.js",
+      "Express.js",
+      "TypeScript",
+      "Redux",
+      "Tailwind CSS",
+    ],
+    content: (
+      <PinContainer title="Zad Al-Mead" href="https://zadulmead.org">
+        <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[40rem] ">
+          <div className="flex items-center justify-center w-full h-full">
+            <Image
+              src={zad || "/placeholder.svg"}
+              width={300}
+              height={300}
+              className="w-full h-full"
+              alt="Zad Al-Mead"
+            />
+          </div>
+          <div className="flex flex-1 w-full rounded-lg mt-0 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+        </div>
+      </PinContainer>
+    ),
+    website: "https://zadulmead.org",
+  },
+  {
     title: "DocStream",
     description:
       "A hospital management system with a real-time statistics dashboard, appointment management, payment integration and automated email notifications.",
@@ -112,7 +144,15 @@ const projects = [
     title: "RemyRecipeX",
     description:
       "An AI-powered app that generates recipes from leftover ingredients. Integrated multiple APIs, deployed with Docker & NGINX.",
-    techStack: ["Flask", "React", "TypeScript", "MongoDB", "Docker","Shadcn UI", "Tailwind CSS"],
+    techStack: [
+      "Flask",
+      "React",
+      "TypeScript",
+      "MongoDB",
+      "Docker",
+      "Shadcn UI",
+      "Tailwind CSS",
+    ],
     content: (
       <PinContainer
         title="RemyRecipeX"
@@ -191,7 +231,14 @@ const projects = [
     title: "Voltstore",
     description:
       "An online e-commerce platform offering a user-friendly interface, detailed product catalog, advanced search functionality, shopping cart, secure checkout process, and user accounts for order tracking.",
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Redux", "Tailwind CSS"],
+    techStack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Redux",
+      "Tailwind CSS",
+    ],
     content: (
       <PinContainer
         title="Voltstore"
