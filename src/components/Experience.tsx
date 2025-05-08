@@ -3,7 +3,7 @@ import { Timeline } from "./ui/timeline";
 function Experience() {
   const data = [
     {
-      time: "June 2022 - Present",
+      time: "June 2023 - Present",
       title: "Full Stack Developer",
       company: "Alif Technologies",
       content: (
@@ -83,7 +83,7 @@ function Experience() {
       ],
     },
     {
-      time: "Feb 2021 - June 2022",
+      time: "Feb 2022 - June 2023",
       title: "Frontend Mentor",
       company: "Alif Technologies",
       content: (
